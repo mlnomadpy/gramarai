@@ -24,7 +24,7 @@ module.exports = {
       patterns: [
         { from: "./background.js", to: "background.js" },
         { from: "./content.js", to: "content.js" },
-        { from: "./icon.png", to: "icon.png" },
+        { from: "./icon.ico", to: "icon.ico" },
         { from: "./popup.html", to: "popup.html" },
         { from: "./manifest.json", to: "manifest.json" },
       ],
