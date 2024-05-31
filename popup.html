@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookmarks AI</title>
+    <style>
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 350px;
+    margin: 0;
+    padding: 15px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+input[type="text"], select, button {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.api-key-section, .prompt-section, .options-section {
+    margin-bottom: 15px;
+}
+
+#searchResults {
+    max-height: 400px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.result {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.result:hover {
+    background-color: #e9e9e9;
+}
+
+.no-results {
+    padding: 10px;
+    color: #666;
+}
+
+    </style>
+<script src="bundle.js"></script>
+
+</head>
+<body>
+    <div class="api-key-section">
+        <label for="apiKey">Enter your API Key:</label>
+        <input type="text" id="apiKey" placeholder="API Key">
+        <button id="saveApiKey">Save API Key</button>
+    </div>
+
+    <!-- Custom Prompt Input and Predefined Prompts Dropdown -->
+<div class="prompt-section">
+    <label for="customPrompt">Custom Prompt:</label>
+    <input type="text" id="customPrompt" placeholder="Enter custom prompt">
+    <select id="predefinedPrompts">
+        <option value="">Select a predefined prompt</option>
+        <option value="Imporove my grammar: ">Improve</option>
+        <option value="Give me feedback on my writing and tell me what did I do wrong and how to improve it: ">Feedback</option>
+        <option value="Rewrite this in an academic style a machine learning conference and journal ">Rewrite in Scientific ML</option>
+        <!-- Add more predefined prompts as needed -->
+    </select>
+</div>
+
+    <!-- Display the summaries -->
+<div id="gemmini_results"></div>
+
+</body>
+</html>
